@@ -1,0 +1,83 @@
+function palindrome(str) {
+
+
+
+  let strLen = str.length;
+  let finalStr = str;
+
+  //console.log(finalStr);
+
+
+
+for(let i = 0; i < 20; i++)
+{
+    finalStr = finalStr.replace( " " , "" );
+    finalStr = finalStr.replace( "/" , "" );
+    finalStr = finalStr.replace( "[" , "" );
+    finalStr = finalStr.replace( "." , "" );
+    finalStr = finalStr.replace( "," , "" );
+    finalStr = finalStr.replace( "\/" , "" );
+    finalStr = finalStr.replace( "#" , "" );
+    finalStr = finalStr.replace( "!" , "" );
+    finalStr = finalStr.replace( "$" , "" );
+    finalStr = finalStr.replace( "%" , "" );
+    finalStr = finalStr.replace( "\^" , "" );
+    finalStr = finalStr.replace( "&" , "" );
+    finalStr = finalStr.replace( "\*" , "" );
+    finalStr = finalStr.replace( ";" , "" );
+    finalStr = finalStr.replace( ":" , "" );
+    finalStr = finalStr.replace( "{" , "" );
+    finalStr = finalStr.replace( "}" , "" );
+    finalStr = finalStr.replace( "=" , "" );
+    finalStr = finalStr.replace( "-" , "" );
+    finalStr = finalStr.replace( "_" , "" );
+    finalStr = finalStr.replace( "`" , "" );
+    finalStr = finalStr.replace( "~" , "" );
+    finalStr = finalStr.replace( "(" , "" );
+    finalStr = finalStr.replace( ")" , "" );
+    finalStr = finalStr.replace( "]" , "" );
+    finalStr = finalStr.replace( "|" , "" );
+   
+
+}
+
+  //console.log(finalStr);
+
+
+  finalStr = finalStr.toLowerCase(finalStr);
+
+  //console.log(finalStr);
+  
+
+
+  //Checks the length
+  let wordLength = finalStr.length;
+
+
+
+//Varibles will be used to indicate palindrome
+  let isPalindrome = true;
+
+ 
+  //for loop looping through all letters
+  for( let i = 0; i <= (wordLength/2) ; i++ )
+  {
+
+    if( finalStr[i] != finalStr[wordLength-1-i]   )
+    {
+
+      isPalindrome = false;
+
+      console.log("Not true");
+
+    }
+
+  }
+
+
+  //returns isPalindrome varible
+  return isPalindrome;
+
+}
+
+palindrome("eye");
