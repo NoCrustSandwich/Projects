@@ -1,0 +1,39 @@
+function telephoneCheck(str) 
+{
+
+  
+
+
+  //Patterns that need to be mathched for them to be valid telephone numbers
+  let telephonePattern1 = /^\d{3}-? ?\d{3}-? ?\d{4}$/i;
+  let telephonePattern2 = /^\(\d{3}\) ?\d{3}-\d{4}$/i;
+  let telephonePattern3 = /^1 \d{3} ?-?\d{3} ?-?\d{4}$/i;
+  let telephonePattern4 = /^1 ?\(\d{3}\) ?\d{3}-\d{4}$/i;
+  
+
+
+  //Checks whether patterns exist, if they dont return null
+  let telephonePatternMatch1 = str.match(telephonePattern1);
+  let telephonePatternMatch2 = str.match(telephonePattern2);
+  let telephonePatternMatch3 = str.match(telephonePattern3);
+  let telephonePatternMatch4 = str.match(telephonePattern4);
+
+  //Checks the nulls, if at least one of them issnt null it measn there ius at least one match
+  if( telephonePatternMatch1 != null || telephonePatternMatch2 != null || telephonePatternMatch3 != null || telephonePatternMatch4 != null)
+  {
+
+    return true;
+
+  }
+  else
+  {
+
+    return false;
+
+  }
+
+
+
+}
+
+telephoneCheck("555-555-5555");
