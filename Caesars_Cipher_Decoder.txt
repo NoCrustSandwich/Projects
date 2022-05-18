@@ -1,0 +1,54 @@
+
+function rot13(str) 
+{
+
+  let cipherStr = str;
+  let de_CipheredStr = "";
+
+  let acsiiCode;
+
+  //gets length
+  let strLen = str.length;
+
+
+
+  //Translates cipher code
+  for( let i = 0 ; i<strLen ; i++ )
+  {
+
+    //Get the acsii code for the character
+    acsiiCode = cipherStr[i].charCodeAt(0);
+
+    if( ( acsiiCode < 65 ) || ( acsiiCode > 90 ) )
+    {
+
+      //Leaves characters in the string from ciphered string
+      de_CipheredStr += cipherStr[i];
+
+      continue;
+
+    }
+
+    //Decodes the number by unshifting it by 13
+    acsiiCode -= 13;
+
+    //makes sure its not out of range and if it is put it back into range
+    if( acsiiCode < 65 )
+    {
+
+      acsiiCode += 26;
+
+    }
+
+    //returns the deciphred character
+    de_CipheredStr += String.fromCharCode(acsiiCode);
+
+
+  }
+
+    //returns the deciphered string
+    return de_CipheredStr;
+
+}
+
+rot13("SERR PBQR PNZC");
