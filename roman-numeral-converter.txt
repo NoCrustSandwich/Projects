@@ -1,0 +1,218 @@
+function convertToRoman(num) 
+{
+
+    //Variable holding the current number
+    let currentNum = num;
+
+    //varible that will conatin the final string
+    let romanNumStr = "";
+
+    //array that will hold the final spring
+    //let unordered_RomanStrArr = [];
+
+
+
+//Function will decrement the amount every time the highest possible roman value can be added until all of the values are accounted for, THIS CREATES AN ARRAY OF ROMAN NUMERALS NECESAARRY TO ADD UP (UNORDERED)
+  while( currentNum > 0 )
+  {
+
+    
+
+    //M = 1000 in Roman numerals
+    if( currentNum >= 1000 )
+    {
+
+      romanNumStr += "M";
+      //unordered_RomanStrArr.push("M");
+
+      currentNum -= 1000;
+     
+      continue;
+
+    }
+
+    //CM = 900 in Roman numerals
+    if( currentNum >= 900 )
+    {
+
+      romanNumStr += "CM";
+      //unordered_RomanStrArr.push("CM");
+
+      currentNum -= 900;
+      
+      continue;
+
+    }
+
+
+    //D = 500 in Roman numerals
+    if( currentNum >= 500 )
+    {
+
+      romanNumStr += "D";
+      //unordered_RomanStrArr.push("D");
+
+      currentNum -= 500;
+     
+      continue;
+
+    }
+
+
+    //CD = 400 in Roman numerals
+    if( currentNum >= 400 )
+    {
+
+      romanNumStr += "CD";
+      //unordered_RomanStrArr.push("CD");
+
+      currentNum -= 400;
+     
+      continue;
+
+    }
+
+
+
+    //C = 100 in Roman numerals
+    if( currentNum >= 100 )
+    {
+
+      romanNumStr += "C";
+      //unordered_RomanStrArr.push("C");
+
+      currentNum -= 100;
+    
+      continue;
+
+    }
+
+    //XC = 90 in Roman numerals
+    if( currentNum >= 90 )
+    {
+
+      romanNumStr += "XC";
+      //unordered_RomanStrArr.push("XC");
+
+      currentNum -= 90;
+    
+      continue;
+
+    }
+
+
+    //L = 50 in Roman numerals
+    if( currentNum >= 50 )
+    {
+
+      romanNumStr += "L";
+      //unordered_RomanStrArr.push("L");
+
+      currentNum -= 50;
+     
+      continue;
+
+    }
+
+
+    //XL = 40 in Roman numerals
+    if( currentNum >= 40 )
+    {
+
+      romanNumStr += "XL";
+      //unordered_RomanStrArr.push("XL");
+
+      currentNum -= 40;
+     
+      continue;
+
+    }
+
+
+
+    //X = 10 in Roman numerals
+    if( currentNum >= 10 )
+    {
+
+
+      romanNumStr += "X";
+      //unordered_RomanStrArr.push("X");
+
+      currentNum -= 10;
+    
+      continue;
+
+    }
+
+
+    //IX = 9 in Roman numerals
+    if( currentNum >= 9 )
+    {
+
+      romanNumStr += "IX";
+      //unordered_RomanStrArr.push("IX");
+
+      currentNum -= 9;
+    
+      continue;
+
+    }
+
+
+
+    //V = 5 in Roman numerals
+    if( currentNum >= 5 )
+    {
+
+      romanNumStr += "V";
+      //unordered_RomanStrArr.push("V");
+
+      currentNum -= 5;
+   
+      continue;
+
+    }
+
+
+
+    //IV = 4 in Roman numerals
+    if( currentNum >= 4 )
+    {
+
+      romanNumStr += "IV";
+      //unordered_RomanStrArr.push("IV");
+
+      currentNum -= 4;
+   
+      continue;
+
+    }
+
+
+
+    //I = 1 in Roman numerals
+    if( currentNum >= 1 )
+    {
+
+      romanNumStr += "I";
+      //unordered_RomanStrArr.push("I");
+
+      currentNum -= 1;
+      
+      continue;
+
+    }
+
+
+    
+  }
+
+
+  return romanNumStr;
+
+
+
+}
+
+
+convertToRoman(36);
